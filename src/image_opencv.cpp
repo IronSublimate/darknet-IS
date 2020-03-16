@@ -60,7 +60,7 @@ Mat image_to_mat(image im)
 
 image mat_to_image(Mat m)
 {
-    IplImage ipl = m;
+    IplImage ipl =cvIplImage(m);
     image im = ipl_to_image(&ipl);
     rgbgr_image(im);
     return im;
